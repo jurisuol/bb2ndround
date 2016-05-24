@@ -22,6 +22,8 @@ group :test, :development do
 end
 
 gem 'grape'
+gem 'grape-entity'
+gem 'rack-cors', :require => 'rack/cors'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
