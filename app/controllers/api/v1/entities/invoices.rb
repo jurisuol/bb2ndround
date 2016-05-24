@@ -10,6 +10,15 @@ module API
         expose :issued_at
         expose :client, using: Client
         expose :category, using: Category
+
+        def price
+          object.price.to_f
+        end
+
+        def price_with_vat
+          object.price_with_vat.to_f
+        end
+
       end
     end
   end

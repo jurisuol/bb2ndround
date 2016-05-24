@@ -28,13 +28,13 @@ ActiveRecord::Schema.define(version: 20160524080550) do
 
   create_table "invoices", force: :cascade do |t|
     t.integer  "invoice_number"
-    t.float    "price"
+    t.decimal  "price",          precision: 15, scale: 2
     t.integer  "vat_rate"
     t.datetime "issued_at"
     t.integer  "client_id"
     t.integer  "category_id"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",                              null: false
+    t.datetime "updated_at",                              null: false
   end
 
   add_index "invoices", ["category_id"], name: "index_invoices_on_category_id"
